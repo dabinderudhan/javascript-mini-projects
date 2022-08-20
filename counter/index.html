@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1rem;
+      }
+
+      article {
+        width: 50%;
+        text-align: center;
+        margin: 2rem auto 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      button {
+        padding: 0.5rem 1.5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background-color: rgba(31, 143, 109, 0.8);
+        color: white;
+        outline: none;
+        border: 0;
+        border-radius: 5px;
+      }
+
+      .reset {
+        width: max-content;
+        margin: 0 auto;
+      }
+
+      input {
+        width: 20%;
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h2>Counter</h2>
+      <h1 class="result">0</h1>
+      <div class="button-container">
+        <button class="decrement" type="button">-</button>
+        <button class="increment" type="button">+</button>
+        <input type="number" value="1" min="1" />
+      </div>
+      <button class="reset" type="button">reset</button>
+    </article>
+    <script src="counter.js"></script>
+  </body>
+</html>

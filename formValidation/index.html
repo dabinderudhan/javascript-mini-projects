@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div class="success-message">form submitted successfully</div>
+    <div class="error-message">please fill the form with correct details</div>
+    <main>
+      <h1>Sign Up</h1>
+      <form class="form">
+        <div class="form-section">
+          <label for="first-name">first name</label>
+          <div class="input-box">
+            <input
+              type="text"
+              id="first-name"
+              class="input-field"
+              placeholder="Enter first name"
+            />
+            <p class="error">
+              <i class="fa fa-exclamation-circle"></i> Enter first name
+            </p>
+          </div>
+        </div>
+        <div class="form-section">
+          <label for="last-name">last name</label>
+          <div class="input-box">
+            <input
+              type="text"
+              id="last-name"
+              class="input-field"
+              placeholder="Enter last name"
+            />
+            <p class="error">
+              <i class="fa fa-exclamation-circle"></i> Enter last name
+            </p>
+          </div>
+        </div>
+        <div class="form-section">
+          <label for="user-name">username</label>
+          <div class="input-box">
+            <input
+              type="text"
+              id="user-name"
+              class="input-field"
+              placeholder="Enter username"
+            />
+            <p class="error">
+              <i class="fa fa-exclamation-circle"></i> Enter username
+            </p>
+          </div>
+        </div>
+        <div class="form-section">
+          <label for="password">password</label>
+          <div class="input-box">
+            <input
+              type="password"
+              id="password"
+              class="input-field"
+              placeholder="Enter password"
+            />
+            <p class="error">
+              <i class="fa fa-exclamation-circle"></i> Enter password
+            </p>
+          </div>
+        </div>
+        <div class="form-section">
+          <label for="confirm-password">confirm password</label>
+          <div class="input-box">
+            <input
+              type="password"
+              id="confirm-password"
+              class="input-field"
+              placeholder="Re-enter password"
+            />
+            <p class="error">
+              <i class="fa fa-exclamation-circle"></i> re-enter password
+            </p>
+          </div>
+        </div>
+        <div class="form-section">
+          <label for="email">email</label>
+          <div class="input-box">
+            <input
+              type="text"
+              id="email"
+              class="input-field"
+              placeholder="Enter email"
+            />
+            <p class="error">
+              <i class="fa fa-exclamation-circle"></i> Enter email
+            </p>
+          </div>
+        </div>
+        <button class="submit-btn" type="submit">sign up</button>
+      </form>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

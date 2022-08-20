@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+body {
+  background-color: #f4fcfd;
+  color: #333;
+  overflow-x: hidden;
+}
+
+span {
+  color: #000;
+}
+
+select,
+input,
+button {
+  font-family: inherit;
+  text-transform: inherit;
+  font-size: inherit;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #999;
+  box-shadow: 3px 3px 5px rgb(0 0 0 /0.1);
+  outline: none;
+}
+
+input[type="text"] {
+  background-color: rgb(84 224 242 / 0.7);
+  width: 300px;
+  text-align: center;
+}
+
+button {
+  background-color: #52e0f3;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #7ce4f1;
+  transform: scale(105%);
+}
+
+button:active {
+  transform: scale(100%);
+}
+
+input[type="range"] {
+  box-shadow: none;
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+main {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+select#message option {
+  height: 10px;
+}
+
+select#message option.success {
+  background-color: rgb(69, 214, 69);
+  color: #fff;
+}
+
+select#message option.error {
+  background-color: rgb(155, 34, 34);
+  color: #fff;
+}
+
+select#message option.warning {
+  background-color: rgb(179, 116, 0);
+  color: #fff;
+}
+
+select#message option.info {
+  background-color: rgb(0, 130, 170);
+  color: #fff;
+}
+
+.toast-container-top-left {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: fixed;
+  width: max-content;
+  top: 0;
+  left: 0;
+}
+
+.toast-container-bottom-left {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: fixed;
+  width: max-content;
+  bottom: 0;
+  left: 0;
+}
+
+.toast-container-top-right {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: fixed;
+  width: max-content;
+  top: 0;
+  right: 0;
+}
+
+.toast-container-bottom-right {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: fixed;
+  width: max-content;
+  bottom: 0;
+  right: 0;
+}
+
+.toast-message {
+  position: relative;
+  width: inherit;
+  background-color: rgb(69, 214, 69);
+  padding: 1rem;
+  border-radius: 5px;
+  color: #fff;
+  box-shadow: 4px 4px 7px rgb(0 0 0 /0.2);
+  display: flex;
+  gap: 0.75rem;
+}
+
+.toast-message span {
+  cursor: pointer;
+}
+
+.toast-message-success {
+  background-color: rgb(69, 214, 69);
+}
+
+.toast-message-error {
+  background-color: rgb(155, 34, 34);
+}
+
+.toast-message-warning {
+  background-color: rgb(179, 116, 0);
+}
+
+.toast-message-info {
+  background-color: rgb(0, 130, 170);
+}
+
+/*~# toast message from top left */
+
+.show-toast-message-top-left {
+  animation: slide-top-left 0.3s forwards;
+
+  top: 0;
+  left: -110%;
+}
+
+@keyframes slide-top-left {
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+.show-toast-message-top-left:not(:first-child) {
+  animation: slide-down-top-left 0.01s;
+  top: 0;
+  left: 0;
+}
+
+@keyframes slide-down-top-left {
+  100% {
+    top: 100px;
+    left: 0;
+  }
+}
+
+/*~# toast message from bottom left */
+
+.show-toast-message-bottom-left {
+  animation: slide-bottom-left 0.3s forwards;
+
+  bottom: 0;
+  left: -100%;
+}
+
+@keyframes slide-bottom-left {
+  100% {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.show-toast-message-bottom-left:not(:last-child) {
+  animation: slide-up-bottom-left 0.01s;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes slide-up-bottom-left {
+  100% {
+    bottom: -100px;
+    left: 0;
+  }
+}
+
+/*~# toast message from top right */
+
+.show-toast-message-top-right {
+  animation: slide-top-right 0.3s forwards;
+
+  top: 0;
+  right: -100%;
+}
+
+@keyframes slide-top-right {
+  100% {
+    top: 0;
+    right: 0;
+  }
+}
+
+.show-toast-message-top-right:not(:first-child) {
+  animation: slide-down-top-right 0.01s;
+  top: 0;
+  right: 0;
+}
+
+@keyframes slide-down-top-right {
+  100% {
+    top: 100px;
+    right: 0;
+  }
+}
+
+/*~# toast message from bottom right */
+
+.show-toast-message-bottom-right {
+  animation: slide-bottom-right 0.3s forwards;
+
+  bottom: 0;
+  right: -100%;
+}
+
+@keyframes slide-bottom-right {
+  100% {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.show-toast-message-bottom-right:not(:last-child) {
+  animation: slide-up-bottom-right 0.01s;
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes slide-up-bottom-right {
+  100% {
+    bottom: -100px;
+    right: 0;
+  }
+}
+
+/*~# remove toast message from top left */
+
+.toast-message.remove-toast-top-left {
+  animation: remove-slide-top-left 0.3s;
+  top: 0;
+  left: -110%;
+}
+
+@keyframes remove-slide-top-left {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: -110%;
+  }
+}
+
+.toast-message.remove-toast-bottom-left {
+  animation: remove-slide-bottom-left 0.3s;
+  bottom: 0;
+  left: -110%;
+}
+
+@keyframes remove-slide-bottom-left {
+  0% {
+    bottom: 0;
+    left: 0;
+  }
+  100% {
+    bottom: 0;
+    left: -110%;
+  }
+}
+
+.toast-message.remove-toast-top-right {
+  animation: remove-slide-top-right 0.3s;
+  top: 0;
+  right: -120%;
+}
+
+@keyframes remove-slide-top-right {
+  0% {
+    top: 0;
+    right: 0;
+  }
+  100% {
+    top: 0;
+    right: -120%;
+  }
+}
+
+.toast-message.remove-toast-bottom-right {
+  animation: remove-slide-bottom-right 0.3s;
+  bottom: 0;
+  right: -120%;
+}
+
+@keyframes remove-slide-bottom-right {
+  0% {
+    bottom: 0;
+    right: 0;
+  }
+  100% {
+    bottom: 0;
+    right: -120%;
+  }
+}

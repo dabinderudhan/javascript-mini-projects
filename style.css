@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(226, 226, 226);
+  color: #333;
+}
+
+body {
+  margin: 4rem;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+.challenges {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.challenge {
+  background-color: rgb(255, 255, 255);
+  color: rgb(182, 118, 0);
+  padding: 2rem 2rem;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgb(0 0 0 /0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+.challenge:hover {
+  transform: scale(105%);
+}
+
+.disable {
+  color: #666;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 1000px) {
+  .challenges {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .challenges {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

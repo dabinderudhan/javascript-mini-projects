@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Toast Popup</title>
+  </head>
+  <body>
+    <main>
+      <h1>Toast Popup</h1>
+      <select name="left-right" id="left-right">
+        <option value="left">left</option>
+        <option value="right">right</option>
+      </select>
+      <select name="top-bottom" id="top-bottom">
+        <option value="top">top</option>
+        <option value="bottom">bottom</option>
+      </select>
+      <select name="message" id="message">
+        <option class="success" value="success">success</option>
+        <option class="error" value="error">error</option>
+        <option class="warning" value="warning">warning</option>
+        <option class="info" value="info">info</option>
+      </select>
+      <input class="input-toast" type="text" value="This is a toast message!" />
+      <!-- <div class="duration">
+        <label for="duration">duration : </label>
+        <input type="range" id="duration" name="duration" min="0" max="8" />
+      </div> -->
+      <button class="toast-btn" type="button">show toast</button>
+      <div class="toast-container-top-left"></div>
+      <div class="toast-container-bottom-left"></div>
+      <div class="toast-container-top-right"></div>
+      <div class="toast-container-bottom-right"></div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
