@@ -9,7 +9,7 @@ const challengeArray = [
   { name: "light & dark mode", link: "./lightDarkMode/index.html" },
   { name: "toast popup", link: "./toastPopup/index.html" },
   { name: "css shapes", link: "./cssShapes/index.html" },
-  { name: "password strength", link: "" },
+  { name: "password strength", link: "./passwordStrength/index.html" },
   { name: "star rating", link: "" },
   { name: "pixel art", link: "" },
   { name: "color spotter", link: "" },

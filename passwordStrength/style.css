@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+body {
+  color: #333;
+  background-color: #f1f1f1;
+}
+
+main {
+  margin: 0 auto;
+  margin-top: 3rem;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+input {
+  width: 400px;
+  height: 50px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgb(0 0 0 / 0.1);
+  outline: none;
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 0.5rem;
+}
+
+.strength {
+  height: 15px;
+  border: 1px solid #999;
+  width: 400px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.strength-fill {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  border: 1px solid transparent;
+}
