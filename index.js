@@ -10,7 +10,7 @@ const challengeArray = [
   { name: "toast popup", link: "./toastPopup/index.html" },
   { name: "css shapes", link: "./cssShapes/index.html" },
   { name: "password strength", link: "./passwordStrength/index.html" },
-  { name: "star rating", link: "" },
+  { name: "star rating", link: "./starRating/index.html" },
   { name: "pixel art", link: "" },
   { name: "color spotter", link: "" },
   { name: "todo list", link: "" },

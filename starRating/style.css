@@ -1,0 +1,74 @@
+:root {
+  --svgColor: rgb(255, 177, 7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-transform: capitalize;
+}
+
+main {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+
+svg {
+  width: 50px;
+  height: 50px;
+  fill: transparent;
+  stroke: #333;
+  stroke-width: 2px;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 4px rgb(0 0 0 /0.2));
+  transition: transform 0.2s ease-in-out;
+}
+
+/* add hover state to the container of the stars */
+.stars:hover svg {
+  fill: var(--svgColor);
+  stroke: var(--svgColor);
+  transform: scale(120%);
+}
+
+/* add hover state to the stars inside the container */
+.stars svg:hover {
+  fill: var(--svgColor);
+  stroke: var(--svgColor);
+  transform: scale(120%);
+}
+
+/* removing hover state to the stars which are adjancent to the hovered star */
+.stars svg:hover ~ svg {
+  fill: transparent;
+  stroke: #333;
+  transform: scale(100%);
+}
+
+.smiley {
+  font-size: 5rem;
+}
+
+.stars .star-selected {
+  fill: var(--svgColor);
+  stroke: var(--svgColor);
+}
