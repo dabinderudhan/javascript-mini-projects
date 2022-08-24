@@ -5,13 +5,9 @@ stars.forEach((star, clickedId) => {
   star.addEventListener("click", () => {
     // console.log(`star ${clickedId} clicked`);
 
-    stars.forEach((otherStar, otherId) => {
-      if (otherId <= clickedId) {
-        // console.log(otherId);
-        otherStar.classList.add("star-selected");
-      } else {
-        otherStar.classList.remove("star-selected");
-      }
+    Array.from(stars).filter((star, id) => {
+      if (id <= clickedId) star.classList.add("star-selected");
+      else star.classList.remove("star-selected");
     });
 
     if (clickedId === 0) {
