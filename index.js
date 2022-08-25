@@ -11,7 +11,7 @@ const challengeArray = [
   { name: "css shapes", link: "./cssShapes/" },
   { name: "password strength", link: "./passwordStrength/" },
   { name: "star rating", link: "./starRating/" },
-  { name: "pixel art", link: "" },
+  { name: "pixel art", link: "./pixelArt" },
   { name: "color spotter", link: "" },
   { name: "todo list", link: "" },
   { name: "transfer list", link: "" },

@@ -55,6 +55,10 @@ h3 {
   cursor: not-allowed;
 }
 
+.disable:hover {
+  transform: none;
+}
+
 @media screen and (max-width: 1000px) {
   .challenges {
     grid-template-columns: repeat(3, 1fr);

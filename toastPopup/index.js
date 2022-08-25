@@ -60,6 +60,7 @@ const showToastMessage = (array, container, toastClass) => {
   console.log("showToast", array);
 
   array.map((toast) => {
+    console.log(toast);
     container.appendChild(toast);
     toast.classList.add(toastClass);
   });
