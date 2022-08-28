@@ -6,12 +6,12 @@ const createChartBtn = document.querySelector("button");
 let noOfRows, noOfCols;
 
 rowsInput.addEventListener("change", (e) => {
-  console.log(e.target.value);
+  // console.log("rows", e.target.value);
   return (noOfRows = e.target.value);
 });
 
 colsInput.addEventListener("change", (e) => {
-  console.log(e.target.value);
+  // console.log("cols", e.target.value);
   return (noOfCols = e.target.value);
 });
 
@@ -104,27 +104,53 @@ class CreateColorChart extends CreatePixelChart {
 }
 
 createChartBtn.addEventListener("click", () => {
+  // console.log({ noOfRows, noOfCols });
   displayPixelChart.innerHTML = "";
-  if ((!noOfRows, !noOfCols)) {
+  if (!noOfRows || !noOfCols) {
     return;
   } else {
     //~? create new instance of respective classes
     const myPixelChart = new CreatePixelChart(noOfRows, noOfCols);
-
     const myColorChart = new CreateColorChart(1, noOfCols);
 
-    insertChartToDom(myPixelChart, "pixel-box");
-    insertChartToDom(myColorChart, "color-box");
+    const pixelBoxChildNodes = insertChartToDom(myPixelChart, "pixel-box");
+    const colorBoxChildNodes = insertChartToDom(myColorChart, "color-box");
+
+    let colorColumn;
+
+    pixelBoxChildNodes.forEach((childRow) => {
+      childRow.childNodes.forEach((childCol) => {
+        childCol.addEventListener("mouseover", (e) => {
+          e.target.style.backgroundColor = colorColumn;
+        });
+      });
+    });
+
+    colorBoxChildNodes.forEach((childRow) =>
+      childRow.childNodes.forEach((childCol) => {
+        childCol.addEventListener(
+          "click",
+          () => (colorColumn = childCol.style.backgroundColor)
+        );
+      })
+    );
+
+    //% initialize the values.
+    rowsInput.value = 0;
+    colsInput.value = 0;
+    noOfRows = "";
+    noOfCols = "";
   }
 });
 
 //~# Helper function to insert chart to DOM.
-const insertChartToDom = (myBoxChart, boxClass) => {
+const insertChartToDom = (classInstance, boxClass) => {
   const chartBox = document.createElement("div");
   chartBox.classList.add(boxClass);
-  chartBox.innerHTML = myBoxChart.printPixelChart();
+  chartBox.innerHTML = classInstance.printPixelChart();
 
   displayPixelChart.appendChild(chartBox);
+  return chartBox.childNodes;
 };
 
 // const name = "दबिंदर सिंग";

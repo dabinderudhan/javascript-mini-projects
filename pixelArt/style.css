@@ -49,6 +49,10 @@ button {
   cursor: pointer;
 }
 
+.display-pixel-chart {
+  box-shadow: 5px 5px 8px rgb(0 0 0 /0.2);
+}
+
 .row {
   display: flex;
 }
@@ -73,7 +77,6 @@ button {
   border: 1px solid #333;
   border-bottom: 0;
   background-color: #fff;
-  margin-top: 2rem;
 }
 
 .color-box {
