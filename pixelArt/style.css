@@ -9,6 +9,46 @@ body {
   margin-bottom: 2rem;
 }
 
+nav {
+  height: 100px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0px 0px 10px 5px rgb(0 0 0 /0.1);
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  font-style: inherit;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: text-decoration 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+nav img {
+  width: 25px;
+}
+
+nav img:hover {
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
+    brightness(104%) contrast(97%);
+}
+
 main {
   margin-top: 3rem;
   display: flex;

@@ -17,6 +17,45 @@
         font-size: 1rem;
       }
 
+      nav {
+        height: 100px;
+        padding: 2rem;
+        margin-bottom: 3rem;
+        box-shadow: 0px 0px 10px 5px rgb(0 0 0 /0.1);
+        background-color: aliceblue;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      nav ul {
+        list-style: none;
+        font-style: inherit;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: text-decoration 0.1s ease-in-out, color 0.1s ease-in-out;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+        color: red;
+      }
+
+      nav img {
+        width: 25px;
+      }
+
+      nav img:hover {
+        filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
+          brightness(104%) contrast(97%);
+      }
+
       article {
         width: 50%;
         text-align: center;
@@ -66,6 +105,33 @@
     </style>
   </head>
   <body>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+      </ul>
+      <ul>
+        <li>
+          <a href="https://github.com/dabinderudhan"
+            ><img src="../images/github.svg" alt="github"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/dabinder-udhan-50133813/"
+            ><img src="../images/linkedin2.svg" alt="linkedIn"
+          /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/dabinderudhan"
+            ><img src="../images/twitter.svg" alt="twitter"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/dabinder.udhan/"
+            ><img src="../images/facebook.svg" alt="facebook"
+          /></a>
+        </li>
+      </ul>
+    </nav>
     <article>
       <h2>Counter</h2>
       <h1 class="result">0</h1>
