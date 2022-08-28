@@ -1,4 +1,19 @@
-const main = document.querySelector("main");
+const displayPixelChart = document.querySelector(".display-pixel-chart");
+const rowsInput = document.getElementById("rows");
+const colsInput = document.getElementById("columns");
+const createChartBtn = document.querySelector("button");
+
+let noOfRows, noOfCols;
+
+rowsInput.addEventListener("change", (e) => {
+  console.log(e.target.value);
+  return (noOfRows = e.target.value);
+});
+
+colsInput.addEventListener("change", (e) => {
+  console.log(e.target.value);
+  return (noOfCols = e.target.value);
+});
 
 class CreatePixelChart {
   constructor(rows, cols) {
@@ -20,20 +35,9 @@ class CreatePixelChart {
     return colArray;
   }
 
-  // this will map the colArray and convert it into string and join them
-  createCols(col) {
-    const updatedColArray = this.createColsArray(col);
-    // updatedColArray.map(
-    //   (col) => (col.style.backgroundColor = this.createRandomColor())
-    // );
-    const newCol = updatedColArray.map((col) => col.outerHTML).join("");
-    return newCol;
-  }
-
   // this create rows
-  createRows(row, col) {
+  createRowsArray(row) {
     const rowArray = [];
-
     const rowDiv = document.createElement("div");
     rowDiv.classList.add("row");
 
@@ -41,16 +45,34 @@ class CreatePixelChart {
       rowArray.push(rowDiv);
     }
 
-    // here we map the row array and add the columns in each row element.
-    rowArray.map((row) => (row.innerHTML = this.createCols(col)));
+    return rowArray;
+  }
 
-    // we map again the updated row array and convert the elements into string and then join them.
-    return rowArray.map((row) => row.outerHTML).join("");
+  // this will map the colArray and convert it into string and join them
+  createColsString(col) {
+    const newCol = this.createColsArray(col)
+      .map((col) => col.outerHTML)
+      .join("");
+    return newCol;
+  }
+
+  createRowsString(rows, cols) {
+    // here we map the row array and insert the columns in each row element.
+    const updatedRow = this.createRowsArray(rows)
+      .map((row) => {
+        row.innerHTML = this.createColsString(cols);
+        return row.outerHTML;
+      })
+      .join("");
+
+    // console.log(updatedRow);
+
+    return updatedRow;
   }
 
   // here we just pass the rows and cols values we receive to createRows method and return the value of createRows method
   printPixelChart() {
-    return this.createRows(this.rows, this.cols);
+    return this.createRowsString(this.rows, this.cols);
   }
 
   // this generates a random color value
@@ -65,24 +87,46 @@ class CreatePixelChart {
   }
 }
 
-// create new instance of class CreatePixelChart
-const myPixelChart = new CreatePixelChart(9, 7);
+//~% extended colorchart class
+class CreateColorChart extends CreatePixelChart {
+  constructor(rows, cols) {
+    super(rows, cols);
+  }
 
-// create a dom element
-const pixelBox = document.createElement("div");
-// add the instance to the innerHTML of dom element
-pixelBox.innerHTML = myPixelChart.printPixelChart();
-pixelBox.classList.add("pixel-box");
+  createColsString(col) {
+    return this.createColsArray(col)
+      .map((col) => {
+        col.style.backgroundColor = this.createRandomColor();
+        return col.outerHTML;
+      })
+      .join("");
+  }
+}
 
-// append the dom element to the DOM element "main"
-main.appendChild(pixelBox);
+createChartBtn.addEventListener("click", () => {
+  displayPixelChart.innerHTML = "";
+  if ((!noOfRows, !noOfCols)) {
+    return;
+  } else {
+    //~? create new instance of respective classes
+    const myPixelChart = new CreatePixelChart(noOfRows, noOfCols);
 
-///////////////////////////////////////////////////////////
-// created another instance of class CreatePixelChart
-const myColorChart = new CreatePixelChart(1, 7);
+    const myColorChart = new CreateColorChart(1, noOfCols);
 
-const colorBox = document.createElement("div");
-colorBox.classList.add("color");
-colorBox.innerHTML = myColorChart.printPixelChart();
+    insertChartToDom(myPixelChart, "pixel-box");
+    insertChartToDom(myColorChart, "color-box");
+  }
+});
 
-main.appendChild(colorBox);
+//~# Helper function to insert chart to DOM.
+const insertChartToDom = (myBoxChart, boxClass) => {
+  const chartBox = document.createElement("div");
+  chartBox.classList.add(boxClass);
+  chartBox.innerHTML = myBoxChart.printPixelChart();
+
+  displayPixelChart.appendChild(chartBox);
+};
+
+// const name = "दबिंदर सिंग";
+// const lastName = "उद्यान";
+// console.log(name, lastName);

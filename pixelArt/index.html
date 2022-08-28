@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,8 +10,20 @@
   <body>
     <main>
       <h1>Pixel Art</h1>
-      <div class="pixel-box">
-        <!-- <div class="row">
+      <section class="rows-cols-input">
+        <div>
+          <label for="rows">Rows :</label>
+          <input type="number" id="rows" name="rows" value="0" />
+        </div>
+        <div>
+          <label for="columns">columns :</label>
+          <input type="number" id="columns" name="columns" value="0" />
+        </div>
+        <button type="button">Create Pixel Chart</button>
+      </section>
+      <section class="display-pixel-chart"></section>
+      <!-- <div class="pixel-box">
+        <div class="row">
           <div class="col"></div>
           <div class="col"></div>
           <div class="col"></div>
@@ -20,8 +32,8 @@
           <div class="col"></div>
           <div class="col"></div>
           <div class="col"></div>
-        </div> -->
-      </div>
+        </div>
+      </div> -->
     </main>
     <script src="./index.js"></script>
   </body>
