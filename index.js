@@ -12,7 +12,7 @@ const challengeArray = [
   { name: "password strength", link: "./passwordStrength/" },
   { name: "star rating", link: "./starRating/" },
   { name: "pixel art", link: "./pixelArt" },
-  { name: "color spotter", link: "" },
+  { name: "color spotter", link: "./colorSpotter/index.html" },
   { name: "todo list", link: "" },
   { name: "transfer list", link: "" },
   { name: "tic-tac-toe", link: "" },

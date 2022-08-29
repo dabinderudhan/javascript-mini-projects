@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="./style.css" />
-    <title>Password Strength</title>
+    <title>Color Spotter</title>
   </head>
   <body>
     <nav>
       <ul>
         <li><a href="../index.html">Home</a></li>
       </ul>
-      <h1>Password Strength</h1>
+      <h1>Color Spotter</h1>
       <ul>
         <li>
           <a href="https://github.com/dabinderudhan"
@@ -38,11 +37,12 @@
       </ul>
     </nav>
     <main>
-      <!-- <h1>Password Strength Checker</h1> -->
-      <p>enter the password</p>
-      <input class="password" type="text" value="" />
-      <div class="strength">
-        <div class="strength-fill"></div>
+      <p>current score : <span class="score">0</span></p>
+      <p>max score so far : <span class="max-score">0</span></p>
+      <div class="range-input">
+        <label for="boxes">select starting size :</label>
+        <input id="boxes" type="range" min="2" max="6" />
+        <p class="range-value">4</p>
       </div>
     </main>
     <script src="./index.js"></script>
