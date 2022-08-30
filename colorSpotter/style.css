@@ -97,5 +97,27 @@ main p:first-child {
 }
 
 .different-box {
-  opacity: 0.5;
+  opacity: 0.9;
+}
+
+.shake-color-box {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(3px, 3px);
+  }
+  35% {
+    transform: translate(-3px, -3px);
+  }
+  50% {
+    transform: translate(3px, 3px);
+  }
+  75% {
+    transform: translate(-3px, -3px);
+  }
+  100% {
+    transform: translate(3px, 3px);
+  }
 }

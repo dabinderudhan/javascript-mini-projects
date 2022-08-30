@@ -4,7 +4,7 @@ const boxesValue = document.querySelector(".boxes-value");
 const scoreElement = document.querySelector(".score");
 const maxScoreElement = document.querySelector(".max-score");
 
-let value = 4;
+let value = inputBoxes.value;
 let boxesArray = [];
 let score = 0;
 let maxScore = 0;
@@ -54,6 +54,8 @@ function createGridBoxes(noOfBoxes) {
 function initialGridValues() {
   updateBoxArray(value);
   createGridBoxes(value);
+  colorBox.classList.remove("shake-color-box");
+  inputBoxes.disabled = false;
 }
 
 initialGridValues();
@@ -63,25 +65,30 @@ inputBoxes.addEventListener("change", (e) => {
   value = e.target.value;
   boxesValue.innerHTML = value;
   initialGridValues();
+  //   console.log(value);
 });
 
 colorBox.addEventListener("click", (e) => {
-  const correctBox = e.target.classList.contains("different-box");
-  console.log(e.target);
+  const randomDivs = document.querySelectorAll("section div");
+  const correctBox = randomDivs[randomBoxNo];
 
-  if (correctBox) {
+  if (e.target.classList.contains("different-box")) {
     boxesArray = [];
     value++;
     initialGridValues();
     score++;
     scoreElement.innerHTML = score;
+    inputBoxes.disabled = true;
   } else {
+    correctBox.style.border = "5px solid red";
+    colorBox.classList.add("shake-color-box");
     if (maxScore < score) maxScore = score;
     maxScoreElement.innerHTML = maxScore;
-    value = 4;
+    // console.log(value);
+    value = boxesValue.innerHTML;
     boxesArray = [];
     score = 0;
     scoreElement.innerHTML = score;
-    initialGridValues();
+    setTimeout(initialGridValues, 1000);
   }
 });
