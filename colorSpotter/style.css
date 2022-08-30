@@ -31,6 +31,7 @@ nav ul {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-basis: 150px;
 }
 
 nav a {
@@ -78,4 +79,23 @@ main {
 
 main p:first-child {
   font-weight: 800;
+}
+
+.color-box {
+  height: 500px;
+  width: 500px;
+  margin-top: 2rem;
+  /* border: 1px solid #333; */
+  box-shadow: 5px 5px 8px rgb(0 0 0 /0.1);
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr); */
+}
+
+.grid-box {
+  border: 0.8px solid #fff;
+}
+
+.different-box {
+  opacity: 0.5;
 }
