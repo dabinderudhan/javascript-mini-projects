@@ -81,7 +81,7 @@ main p:first-child {
   font-weight: 800;
 }
 
-.color-box {
+.div-container {
   height: 500px;
   width: 500px;
   margin-top: 2rem;
@@ -100,7 +100,7 @@ main p:first-child {
   opacity: 0.8;
 }
 
-.shake-color-box {
+.shake-div-container {
   animation: shake 0.5s;
 }
 

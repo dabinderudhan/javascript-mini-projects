@@ -1,15 +1,16 @@
-const colorBox = document.querySelector(".color-box");
-const inputBoxes = document.getElementById("boxes");
-const boxesValue = document.querySelector(".boxes-value");
+const divContainer = document.querySelector(".div-container");
+const containerRange = document.getElementById("container-range");
+const gridValueElement = document.querySelector(".grid-value");
 const scoreElement = document.querySelector(".score");
 const maxScoreElement = document.querySelector(".max-score");
 
-let value = inputBoxes.value;
-let boxesArray = [];
+let value = containerRange.value;
+let divArray = [];
 let score = 0;
 let maxScore = 0;
-let randomBoxNo;
+let randomDivNo;
 
+//~% function to create random color
 function createRandomColor() {
   const red = Math.floor(Math.random() * 256);
   const blue = Math.floor(Math.random() * 256);
@@ -18,77 +19,78 @@ function createRandomColor() {
   return color;
 }
 
-function updateBoxArray(noOfBoxes) {
+//~% function to add divs to the array
+function updateDivArray(noOfBoxes) {
   noOfBoxes *= noOfBoxes;
   const div = document.createElement("div");
   div.classList.add("grid-box");
 
   for (let i = 0; i < noOfBoxes; i++) {
-    boxesArray.push(div);
+    divArray.push(div);
   }
 
-  return boxesArray;
+  return divArray;
 }
 
-function createGridBoxes(noOfBoxes) {
-  colorBox.style.gridTemplateColumns = `repeat(${noOfBoxes}, 1fr)`;
-  colorBox.style.gridTemplateRows = `repeat(${noOfBoxes}, 1fr)`;
+//~% function to create grid box
+function createGrid(noOfBoxes) {
+  divContainer.style.gridTemplateColumns = `repeat(${noOfBoxes}, 1fr)`;
+  divContainer.style.gridTemplateRows = `repeat(${noOfBoxes}, 1fr)`;
 
-  boxesArray.map((box) => {
-    box.style.backgroundColor = createRandomColor();
+  divArray.map((div) => {
+    div.style.backgroundColor = createRandomColor();
   });
 
-  colorBox.innerHTML = boxesArray
-    .map((box) => {
-      return box.outerHTML;
+  divContainer.innerHTML = divArray
+    .map((div) => {
+      return div.outerHTML;
     })
     .join("");
 
-  randomBoxNo = Math.floor(Math.random() * boxesArray.length);
+  randomDivNo = Math.floor(Math.random() * divArray.length);
   const randomDivs = document.querySelectorAll("section div");
-  randomDivs[randomBoxNo].classList.add("different-box");
+  randomDivs[randomDivNo].classList.add("different-box");
 
-  return randomBoxNo;
+  return randomDivNo;
 }
 
-function initialGridValues() {
-  updateBoxArray(value);
-  createGridBoxes(value);
-  colorBox.classList.remove("shake-color-box");
-  inputBoxes.disabled = false;
+//~% initiate functions at the loading of the page
+function initialValues() {
+  divArray = [];
+  updateDivArray(value);
+  createGrid(value);
+  divContainer.classList.remove("shake-div-container");
+  containerRange.disabled = false;
 }
+initialValues();
 
-initialGridValues();
-
-inputBoxes.addEventListener("change", (e) => {
-  boxesArray = [];
+//~# eventlistener on change in the value of range
+containerRange.addEventListener("change", (e) => {
   value = e.target.value;
-  boxesValue.innerHTML = value;
-  initialGridValues();
+  gridValueElement.innerHTML = value;
+  initialValues();
   //   console.log(value);
 });
 
-colorBox.addEventListener("click", (e) => {
+//~? eventlistener when clicked on any divs inside the container.
+divContainer.addEventListener("click", (e) => {
   const randomDivs = document.querySelectorAll("section div");
-  const correctBox = randomDivs[randomBoxNo];
+  const correctBox = randomDivs[randomDivNo];
 
   if (e.target.classList.contains("different-box")) {
-    boxesArray = [];
     value++;
-    initialGridValues();
     score++;
     scoreElement.innerHTML = score;
-    inputBoxes.disabled = true;
+    initialValues();
+    containerRange.disabled = true;
   } else {
-    correctBox.style.border = "5px solid red";
-    colorBox.classList.add("shake-color-box");
     if (maxScore < score) maxScore = score;
     maxScoreElement.innerHTML = maxScore;
-    // console.log(value);
-    value = boxesValue.innerHTML;
-    boxesArray = [];
+    value = gridValueElement.innerHTML;
     score = 0;
     scoreElement.innerHTML = score;
-    setTimeout(initialGridValues, 1000);
+    correctBox.style.border = "5px solid red";
+    divContainer.classList.add("shake-div-container");
+    setTimeout(initialValues, 1000);
   }
 });
