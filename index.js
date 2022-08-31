@@ -13,7 +13,7 @@ const challengeArray = [
   { name: "star rating", link: "./starRating/" },
   { name: "pixel art", link: "./pixelArt" },
   { name: "color spotter", link: "./colorSpotter/index.html" },
-  { name: "todo list", link: "" },
+  { name: "todo list", link: "./toDoList/index.html" },
   { name: "transfer list", link: "" },
   { name: "tic-tac-toe", link: "" },
   { name: "chess board", link: "" },
