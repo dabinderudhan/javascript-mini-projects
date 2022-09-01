@@ -2,20 +2,34 @@ const enterTaskElement = document.querySelector(".enter-task input");
 const displayTasksContainer = document.querySelector(".display-tasks");
 const addTaskButton = document.querySelector(".enter-task button");
 
-let taskArray = ["HTML", "CSS", "JavaScript", "React", "Github"];
+let taskArray = [];
 
+//~% on loading window it checks the data from localstorage and updates and displays the content of taskArray accordingly.
+window.addEventListener("load", () => {
+  let todo = localStorage.getItem("todo");
+
+  if (todo === null) {
+    taskArray = [];
+  } else {
+    taskArray = JSON.parse(todo);
+  }
+  displayTaskValue(taskArray);
+});
+
+//~# this gets the value from the user input and adds the new value to the local storage.
 const getTaskValue = () => {
-  // let todo = localStorage.getItem("todo");
-  // console.log(todo);
+  // console.log(taskArray);
 
   const taskValue = enterTaskElement.value;
   if (!taskValue) return;
   else {
     taskArray.push(taskValue);
+    localStorage.setItem("todo", JSON.stringify(taskArray));
     displayTaskValue(taskArray);
   }
 };
 
+//~? this displays the task array in the DOM
 const displayTaskValue = (taskArray) => {
   displayTasksContainer.innerHTML = taskArray
     .map(
@@ -32,13 +46,13 @@ const displayTaskValue = (taskArray) => {
     .join("");
 };
 
-displayTaskValue(taskArray);
-
+//~^ eventlistener to the add task button to get and display the new value from the user and clear the user input.
 addTaskButton.addEventListener("click", () => {
   getTaskValue();
   enterTaskElement.value = "";
 });
 
+//~> this deletes the task from the task array and updates the local storage.
 const deleteTask = (e) => {
   const element = e.target;
 
@@ -46,10 +60,12 @@ const deleteTask = (e) => {
     const elementTask =
       element.parentElement.firstElementChild.firstElementChild.innerHTML;
     taskArray = taskArray.filter((task) => task !== elementTask);
+    localStorage.setItem("todo", JSON.stringify(taskArray));
     displayTaskValue(taskArray);
   }
 };
 
+//~> this edit the task and also updates the local storage.
 const editTask = (e) => {
   const element = e.target;
 
@@ -73,6 +89,7 @@ const editTask = (e) => {
 
       const taskIndex = taskArray.findIndex((task) => task === oldValue);
       taskArray[taskIndex] = newValue;
+      localStorage.setItem("todo", JSON.stringify(taskArray));
 
       selectElement(".edit-task", "inline-block");
       selectElement(".save-task", "none");
@@ -82,5 +99,6 @@ const editTask = (e) => {
   }
 };
 
+//~% we call the functions deletetask and edittask on displayTaskContainer.
 displayTasksContainer.addEventListener("click", deleteTask);
 displayTasksContainer.addEventListener("click", editTask);
