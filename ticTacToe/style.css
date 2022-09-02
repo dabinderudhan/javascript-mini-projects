@@ -67,6 +67,13 @@ main {
   margin-top: 9rem;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
@@ -96,4 +103,24 @@ main {
 .col:hover {
   background-color: rgb(216, 216, 216);
   transform: scale(103%);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid rgb(107, 107, 107);
+  outline: none;
+  background-color: rgb(107, 107, 107);
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 5px rgb(0 0 0 /0.1);
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.result {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
