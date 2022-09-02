@@ -9,9 +9,11 @@ const transferSelectedRightBtn = document.querySelector(
   ".transfer-selected-right"
 );
 
+//~? initial values
 let leftBoxArray = ["js", "html", "css", "ts"];
 let rightBoxArray = ["react", "angular", "vue", "svelte"];
 
+//~% this displays the items in the DOM.
 function displayItems(container, array) {
   container.innerHTML = array
     .map(
@@ -23,9 +25,11 @@ function displayItems(container, array) {
     .join("");
 }
 
+//~# we call the functions to display items in the DOM.
 displayItems(leftBoxContainer, leftBoxArray);
 displayItems(rightBoxContainer, rightBoxArray);
 
+//~> eventlistener to transfer all the items from right to left
 transferAllLeftBtn.addEventListener("click", () => {
   rightBoxArray.forEach((item) => {
     leftBoxArray.push(item);
@@ -35,6 +39,7 @@ transferAllLeftBtn.addEventListener("click", () => {
   });
 });
 
+//~> eventlistener to transfer all the items from right to left
 transferAllRightBtn.addEventListener("click", () => {
   leftBoxArray.forEach((item) => {
     rightBoxArray.push(item);
@@ -44,8 +49,10 @@ transferAllRightBtn.addEventListener("click", () => {
   });
 });
 
+//~? initial value of selected items
 let itemIdArray = [];
 
+//~> eventlistener to activate the transfer right btn if the item is clicked and add the selected items in the itemIdArray.
 leftBoxContainer.addEventListener("click", (e) => {
   if (e.target.checked) {
     // console.log("item clicked");
@@ -55,6 +62,7 @@ leftBoxContainer.addEventListener("click", (e) => {
   }
 });
 
+//~> eventlistener to
 transferSelectedRightBtn.addEventListener("click", () => {
   // console.log("item transferred");
   leftBoxArray = leftBoxArray.filter((item) => !itemIdArray.includes(item));
