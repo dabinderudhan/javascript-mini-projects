@@ -14,7 +14,7 @@ const challengeArray = [
   { name: "pixel art", link: "./pixelArt" },
   { name: "color spotter", link: "./colorSpotter/index.html" },
   { name: "todo list", link: "./toDoList/index.html" },
-  { name: "transfer list", link: "" },
+  { name: "transfer list", link: "./transferList/index.html" },
   { name: "tic-tac-toe", link: "" },
   { name: "chess board", link: "" },
   { name: "chips input", link: "" },
