@@ -62,6 +62,7 @@ function myEventFunction(e, box) {
 
   if (Array.from(boxes).every((box) => box.innerHTML !== "")) {
     showResult.innerHTML = "game draw";
+    boxes.forEach((box) => (box.style.pointerEvents = "none"));
   }
 }
 
