@@ -17,7 +17,7 @@ const challengeArray = [
   { name: "transfer list", link: "./transferList/index.html" },
   { name: "tic-tac-toe", link: "./ticTacToe/index.html" },
   { name: "chess board", link: "" },
-  { name: "chips input", link: "" },
+  { name: "chips input", link: "./chipsInput/index.html" },
   { name: "countdown timer", link: "" },
   { name: "area selector", link: "" },
   { name: "carousel", link: "" },
