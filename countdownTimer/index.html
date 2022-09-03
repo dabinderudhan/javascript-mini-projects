@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Countdown Timer</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+      </ul>
+      <h1>Countdown Timer</h1>
+      <ul>
+        <li>
+          <a href="https://github.com/dabinderudhan"
+            ><img src="../images/github.svg" alt="github"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/dabinder-udhan-50133813/"
+            ><img src="../images/linkedin2.svg" alt="linkedIn"
+          /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/dabinderudhan"
+            ><img src="../images/twitter.svg" alt="twitter"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/dabinder.udhan/"
+            ><img src="../images/facebook.svg" alt="facebook"
+          /></a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="timer">
+        <input
+          type="number"
+          name="tens-min"
+          id="min-in-tens"
+          min="0"
+          max="5"
+          value="1"
+        />
+        <input
+          type="number"
+          name="ones-min"
+          id="min-in-ones"
+          min="0"
+          max="9"
+          value="2"
+        />
+
+        <input
+          type="number"
+          name="tens-sec"
+          id="sec-in-tens"
+          min="0"
+          max="5"
+          value="3"
+        />
+        <input
+          type="number"
+          name="ones-sec"
+          id="sec-in-ones"
+          min="0"
+          max="9"
+          value="5"
+        />
+        <p>:</p>
+      </div>
+      <div class="buttons">
+        <button class="start" type="button">start</button>
+        <button class="stop disable-btn" type="button">stop</button>
+        <button class="reset" type="button">reset</button>
+      </div>
+      <p>please enter a valid time in <span>MM:SS</span></p>
+    </main>
+    <script src="./index.js" defer></script>
+  </body>
+</html>
