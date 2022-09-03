@@ -1,4 +1,4 @@
-# <center>JAVASCRIPT MINI CHALLENGES</center>
+# <h1 align="center">JAVASCRIPT MINI CHALLENGES</h1>
 
 - <a href="https://dabinderudhan.github.io/javascript-mini-projects/counter/">Counter</a>
 - <a href="https://dabinderudhan.github.io/javascript-mini-projects/guessTheNumber/">Guess The Number</a>
