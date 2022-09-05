@@ -70,34 +70,19 @@ main {
 }
 
 section {
-  border: 1px solid #999;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.row-div {
+.row {
   display: flex;
 }
 
-.col-div {
+.box {
   display: flex;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #999;
-  border-left: 0;
-  border-top: 0;
-}
-
-.col-div:last-child {
-  border-right: 0;
-}
-
-.row-div:last-child .col-div {
-  border-bottom: 0;
-}
-
-.red {
-  background-color: red;
+  width: 60px;
+  height: 60px;
+  outline: 1px solid #999;
 }
