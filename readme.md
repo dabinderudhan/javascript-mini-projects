@@ -16,3 +16,4 @@
 - <a href="https://dabinderudhan.github.io/javascript-mini-projects/ticTacToe/">Tic-Tac-Toe</a>
 - <a href="https://dabinderudhan.github.io/javascript-mini-projects/chipsInput/">Chips Input</a>
 - <a href="https://dabinderudhan.github.io/javascript-mini-projects/countdownTimer/">Countdown Timer</a>
+- <a href="https://dabinderudhan.github.io/javascript-mini-projects/areaSelector/">Area Selector</a>
