@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("counter");
+
 const result = document.querySelector(".result");
 const incrementBtn = document.querySelector(".increment");
 const decrementBtn = document.querySelector(".decrement");

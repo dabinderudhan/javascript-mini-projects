@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("todo list");
+
 const enterTaskElement = document.querySelector(".enter-task input");
 const displayTasksContainer = document.querySelector(".display-tasks");
 const addTaskButton = document.querySelector(".enter-task button");

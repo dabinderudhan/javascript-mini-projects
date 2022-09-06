@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "../global.css";
 
 html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -25,49 +21,6 @@ body {
   margin-top: 5rem;
 }
 
-nav {
-  height: 100px;
-  padding: 2rem 4rem;
-  margin-bottom: 3rem;
-  box-shadow: 0px 0px 10px 5px rgb(0 0 0 /0.1);
-  background-color: aliceblue;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-nav ul {
-  list-style: none;
-  font-style: inherit;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  transition: text-decoration 0.1s ease-in-out, color 0.1s ease-in-out;
-}
-
-nav a:hover {
-  text-decoration: underline;
-  color: red;
-}
-
-nav img {
-  width: 25px;
-}
-
-nav img:hover {
-  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
-    brightness(104%) contrast(97%);
-}
-
 .success-message {
   color: rgb(8, 161, 16);
   display: none;
@@ -88,7 +41,7 @@ main {
   background-color: #fff;
 }
 
-h1 {
+main h1 {
   text-align: center;
   margin-bottom: 2rem;
 }

@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("countdown timer");
+
 const minInTens = document.getElementById("min-in-tens");
 const minsInOnes = document.getElementById("min-in-ones");
 const secInTens = document.getElementById("sec-in-tens");

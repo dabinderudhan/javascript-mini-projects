@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("area selector");
+
 const root = document.querySelector("section");
 const rows = window.innerHeight / 60 - 3;
 const cols = window.innerWidth / 60 - 3;

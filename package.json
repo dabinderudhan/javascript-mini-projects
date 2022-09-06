@@ -1,0 +1,20 @@
+{
+  "name": "javascript-projects",
+  "version": "1.0.0",
+  "description": "- <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/counter/\">Counter</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/guessTheNumber/\">Guess The Number</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/formValidation/\">Form Validation</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/telephoneNumberFormatter/\">Telephone Formatter</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/lightDarkMode/\">Light & Dark Mode</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/toastPopup/\">Toast Popup</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/cssShapes/\">CSS Shapes</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/passwordStrength/\">Password Strength</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/starRating/\">Star Rating</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/pixelArt/\">Pixel Art</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/colorSpotter/\">Color Spotter</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/toDoList/\">Todo List</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/transferList/\">Transfer List</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/ticTacToe/\">Tic-Tac-Toe</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/chipsInput/\">Chips Input</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/countdownTimer/\">Countdown Timer</a>\r - <a href=\"https://dabinderudhan.github.io/javascript-mini-projects/areaSelector/\">Area Selector</a>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dabinderudhan/javascript-mini-projects.git"
+  },
+  "author": "Dabinder Udhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dabinderudhan/javascript-mini-projects/issues"
+  },
+  "homepage": "https://github.com/dabinderudhan/javascript-mini-projects#readme",
+  "type": "module"
+}

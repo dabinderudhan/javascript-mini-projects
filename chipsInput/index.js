@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("chips input");
+
 const inputChips = document.querySelector(".input-chips");
 const showChips = document.querySelector(".show-chips");
 

@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("pixel art");
+
 const displayPixelChart = document.querySelector(".display-pixel-chart");
 const rowsInput = document.getElementById("rows");
 const colsInput = document.getElementById("columns");

@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("form validation");
+
 const inputBox = document.querySelectorAll(".input-box");
 const submitBtn = document.querySelector(".submit-btn");
 const firstName = document.getElementById("first-name");

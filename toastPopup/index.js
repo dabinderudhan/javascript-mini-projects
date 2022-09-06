@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("toast popup");
+
 const selectLeftRight = document.getElementById("left-right");
 const selectTopBottom = document.getElementById("top-bottom");
 const selectMessage = document.getElementById("message");

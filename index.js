@@ -1,3 +1,6 @@
+import { createNav } from "./header.js";
+createNav("frontend mini challenges");
+
 const challengeArray = [
   { name: "counter", link: "./counter/" },
   { name: "guess the number", link: "./guessTheNumber/" },

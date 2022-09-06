@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("telephone formatter");
+
 const inputMobileNumber = document.querySelector(".input-mob-num");
 const displayMobileNumber = document.querySelector(".display-mob-num");
 

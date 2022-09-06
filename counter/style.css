@@ -1,0 +1,48 @@
+@import "../global.css";
+
+article {
+  width: 50%;
+  text-align: center;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: rgba(31, 143, 109, 0.8);
+  color: white;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+}
+
+.reset {
+  width: max-content;
+  margin: 0 auto;
+}
+
+input {
+  width: 20%;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}

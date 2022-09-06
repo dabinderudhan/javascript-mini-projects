@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("star rating");
+
 const stars = document.querySelectorAll(".stars svg");
 const smiley = document.querySelector(".smiley");
 

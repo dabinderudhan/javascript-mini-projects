@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("transfer list");
+
 const leftBoxContainer = document.querySelector(".left-box");
 const rightBoxContainer = document.querySelector(".right-box");
 const transferAllLeftBtn = document.querySelector(".transfer-all-left");

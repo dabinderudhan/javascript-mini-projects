@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("password strength");
+
 const password = document.querySelector(".password");
 const strengthColor = document.querySelector(".strength-fill");
 

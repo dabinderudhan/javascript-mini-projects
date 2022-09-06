@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("tic-tac-toe");
+
 const boxes = document.querySelectorAll(".col");
 const resetBtn = document.querySelector(".reset-btn");
 const showResult = document.querySelector(".result");

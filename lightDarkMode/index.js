@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("light dark mode");
+
 const main = document.querySelector("main");
 const checkBox = document.querySelector(".checkbox");
 

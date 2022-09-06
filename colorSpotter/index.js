@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("color spotter");
+
 const divContainer = document.querySelector(".div-container");
 const containerRange = document.getElementById("container-range");
 const gridValueElement = document.querySelector(".grid-value");

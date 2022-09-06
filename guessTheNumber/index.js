@@ -1,3 +1,6 @@
+import { createNav } from "../header.js";
+createNav("guess the number");
+
 const guessNumber = document.querySelector(".guess-number");
 const submitBtn = document.querySelector(".submit-btn");
 const startGameBtn = document.querySelector(".startgame-btn");
