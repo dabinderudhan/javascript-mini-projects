@@ -12,6 +12,13 @@ const imagesLink = [
   "../images/facebook.svg",
 ];
 
+const imagesLinkMainPage = [
+  "./images/github.svg",
+  "./images/linkedin2.svg",
+  "./images/twitter.svg",
+  "./images/facebook.svg",
+];
+
 export function createNav(title) {
   const nav = document.createElement("nav");
   const home = document.createElement("a");
@@ -30,7 +37,13 @@ export function createNav(title) {
     const a = document.createElement("a");
     a.setAttribute("href", linkArray[i]);
     const img = document.createElement("img");
-    img.setAttribute("src", imagesLink[i]);
+
+    img.setAttribute(
+      "src",
+      title === "frontend mini challenges"
+        ? imagesLinkMainPage[i]
+        : imagesLink[i]
+    );
     a.appendChild(img);
     li.appendChild(a);
     ul.appendChild(li);
