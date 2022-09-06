@@ -1,4 +1,4 @@
-import { createNav } from "./header.js";
+import { createNav } from "../header.js";
 createNav("frontend mini challenges");
 
 const challengeArray = [
