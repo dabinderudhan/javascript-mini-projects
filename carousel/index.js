@@ -8,6 +8,7 @@ const dots = document.querySelectorAll(".round-buttons button");
 
 //% we set the imageId to 1
 let imageId = 1;
+showImages(imageId);
 
 //~% function to the add the value of "id" to the value of "imageId" and pass it as argument to "ShowImages function"
 function plusImages(id) {
@@ -16,12 +17,12 @@ function plusImages(id) {
 
 //~^ assign the round button id to the imageId value and pass it as argument to the "showImages" function
 function currentImage(id) {
-  // console.log(id);
   showImages((imageId = id));
+  // console.log({ id, imageId });
 }
 
 function showImages(id) {
-  // console.log(id);
+  // console.log({ id, imageId });
   //#=> if the id value is greater than images.length then set imageId to 1.
   if (id > images.length) imageId = 1;
 
@@ -47,6 +48,6 @@ rightButton.addEventListener("click", () => {
 
 dots.forEach((dot) =>
   dot.addEventListener("click", (e) => {
-    currentImage(e.target.dataset.id); //> we get the data-id and pass it as argument to the currentImage function.
+    currentImage(Number(e.target.dataset.id)); //> we get the data-id and pass it as argument to the currentImage function.
   })
 );

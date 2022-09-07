@@ -23,6 +23,10 @@ main {
   overflow: hidden;
 }
 
+.image-gallery img {
+  display: none;
+}
+
 .buttons-container {
   position: absolute;
 }
