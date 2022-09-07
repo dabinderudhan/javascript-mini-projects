@@ -1,0 +1,24 @@
+@import "../global.css";
+
+.user-input {
+  width: 300px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.user-input div {
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+}
+
+.user-input div label {
+  flex-basis: 70%;
+  text-align: left;
+}
+
+.user-input div input {
+  flex-basis: 100%;
+}
