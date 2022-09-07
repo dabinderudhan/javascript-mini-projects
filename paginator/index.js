@@ -8,11 +8,12 @@ const addBoundary = document.querySelector("#boundary");
 
 let pageNos = [];
 
-function getRangeValue(inputRange) {
-  return inputRange.value;
-}
-
 addPageCount.addEventListener("input", () => {
-  let value = getRangeValue(addPageCount);
-  console.log(value);
+  let value = addPageCount.value;
+
+  for (let i = 1; i <= value; i++) {
+    pageNos.push(i);
+    let uniqueValueArray = [...new Set(pageNos)];
+    console.log(uniqueValueArray);
+  }
 });
