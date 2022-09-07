@@ -1,0 +1,75 @@
+@import "../global.css";
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+main {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image-gallery {
+  display: flex;
+  box-shadow: 4px 4x 8px rgb(0 0 0 /0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.buttons-container {
+  position: absolute;
+}
+
+.buttons {
+  font-size: 2rem;
+  padding: 0rem 1rem;
+  border-radius: 5px;
+  outline: none;
+  background-color: #999;
+  border: none;
+  box-shadow: 3px 3px 6px rgb(0 0 0 /0.1);
+  position: absolute;
+  cursor: pointer;
+}
+
+.left,
+.right {
+  top: 35%;
+  transform: translateY(50%);
+}
+
+.left {
+  left: -100px;
+}
+
+.right {
+  right: -100px;
+}
+
+.round-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.round-buttons button {
+  margin-top: 2rem;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  background-color: none;
+  box-shadow: 2px 2px 4px rgb(0 0 0 /0.1);
+  cursor: pointer;
+}
+
+.active-button {
+  background-color: #333;
+}

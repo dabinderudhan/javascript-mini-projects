@@ -23,7 +23,7 @@ const challengeArray = [
   { name: "chips input", link: "./chipsInput/" },
   { name: "countdown timer", link: "./countdownTimer/" },
   { name: "area selector", link: "./areaSelector" },
-  { name: "carousel", link: "" },
+  { name: "carousel", link: "./carousel" },
   { name: "paginator", link: "" },
   { name: "comment box", link: "" },
   { name: "json creater", link: "" },
