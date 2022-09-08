@@ -3,7 +3,7 @@ createNav("paginator");
 
 const paginationElement = document.getElementById("pagination");
 const pagesElement = document.getElementById("pages");
-const siblingsElement = document.getElementById("siblings");
+const siblingElement = document.getElementById("siblings");
 const boundaryElement = document.getElementById("boundary");
 
 class Paginator {
@@ -16,9 +16,9 @@ class Paginator {
   ) {
     this.paginatorElement = paginatorElement;
     this.totalPages = totalPages;
+    this.activePage = activePage;
     this.siblingCount = siblingCount;
     this.boundary = boundary;
-    this.activePage = activePage;
 
     this.addListener();
     this.populate();
@@ -53,7 +53,6 @@ class Paginator {
 
     const fragment = document.createDocumentFragment();
 
-    //~? created decrement button and appended it to fragment
     let button = document.createElement("button");
     button.classList.add("page-modifier");
     button.classList.add("page-decrement");
@@ -101,7 +100,6 @@ class Paginator {
       fragment.appendChild(button);
     }
 
-    //~? created increment button and appended it to fragment
     button = document.createElement("button");
     button.classList.add("page-modifier");
     button.classList.add("page-increment");
@@ -119,7 +117,6 @@ class Paginator {
     activeElement.focus();
   }
 
-  //~% => we get the values from the input and assign it to the contructor totalPages, boundary, siblingCount.
   setTotalPages(totalPages) {
     this.totalPages = totalPages;
     this.activePage = Math.min(this.activePage, this.totalPages);
@@ -140,19 +137,18 @@ class Paginator {
 const paginator = new Paginator(
   paginationElement,
   +pagesElement.value,
-  +siblingsElement.value,
+  +siblingElement.value,
   +boundaryElement.value
 );
 
-//~% => get the value on input and pass it to the paginator instance.
-pagesElement.addEventListener("input", () =>
-  paginator.setTotalPages(+pagesElement.value)
-);
+pagesElement.addEventListener("input", () => {
+  paginator.setTotalPages(+pagesElement.value);
+});
 
-siblingsElement.addEventListener("input", () =>
-  paginator.setSiblingCount(+siblingsElement.value)
-);
+siblingElement.addEventListener("input", () => {
+  paginator.setSiblingCount(+siblingElement.value);
+});
 
-boundaryElement.addEventListener("input", () =>
-  paginator.setBoundary(+boundaryElement.value)
-);
+boundaryElement.addEventListener("input", () => {
+  paginator.setBoundary(+boundaryElement.value);
+});

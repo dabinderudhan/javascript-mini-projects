@@ -1,24 +1,74 @@
 @import "../global.css";
 
-.user-input {
-  width: 300px;
-  margin-inline: auto;
+body {
+  background-color: rgb(173, 173, 173);
+  min-width: 100vw;
+  min-height: 100vh;
+  margin-top: 0;
+  padding-top: 9rem;
+  margin-left: 0;
+}
+
+.form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-}
-
-.user-input div {
-  flex-grow: 2;
-  display: flex;
+  row-gap: 10px;
   align-items: center;
+  margin-bottom: 50px;
 }
 
-.user-input div label {
-  flex-basis: 70%;
-  text-align: left;
+.pagination {
+  display: inline-flex;
+  column-gap: 10px;
 }
 
-.user-input div input {
-  flex-basis: 100%;
+input {
+  width: 200px;
+  padding: 2px 5px;
+  font-size: 1rem;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.page-number,
+.page-modifier {
+  display: flex;
+  flex: 1 1 0;
+  justify-content: center;
+  width: 0;
+  min-width: 30px;
+  max-width: 30px;
+  padding: 6px 12px;
+  color: black;
+  background-color: #fafafa;
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:disabled {
+  color: #ccc;
+  background-color: inherit;
+}
+
+.page-number.active {
+  color: white;
+  background-color: #0070f3;
+}
+
+.dot-left:hover::before {
+  content: "<<";
+}
+
+.dot-right:hover::before {
+  content: ">>";
+}
+
+.dot::before {
+  font-size: 0.8rem;
+}
+
+.dot:hover {
+  font-size: 0;
 }
