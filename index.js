@@ -25,7 +25,7 @@ const challengeArray = [
   { name: "area selector", link: "./areaSelector/" },
   { name: "carousel", link: "./carousel/" },
   { name: "paginator", link: "./paginator/" },
-  { name: "comment box", link: "" },
+  { name: "comment box", link: "./commentBox/" },
   { name: "json creater", link: "" },
   { name: "array methods", link: "" },
   { name: "progress bar", link: "" },
