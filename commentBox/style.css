@@ -8,6 +8,12 @@
   border: 1px solid #999;
   background-color: rgb(207, 206, 206);
   box-shadow: 3px 3px 5px rgb(0 0 0 /0.1);
+  gap: 0.5rem;
+}
+
+.reply-comment {
+  width: calc(100% - 2rem);
+  margin-left: 2rem;
 }
 
 button {
@@ -15,6 +21,5 @@ button {
   border-radius: 5px;
   text-transform: uppercase;
   border: 1px solid #333;
-  margin-top: 1rem;
   cursor: pointer;
 }
