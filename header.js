@@ -2,21 +2,18 @@ const linkArray = [
   "https://github.com/dabinderudhan",
   "https://www.linkedin.com/in/dabinder-udhan-50133813/",
   "https://twitter.com/dabinderudhan",
-  "https://www.facebook.com/dabinder.udhan/",
 ];
 
 const imagesLink = [
   "../images/github.svg",
   "../images/linkedin2.svg",
   "../images/twitter.svg",
-  "../images/facebook.svg",
 ];
 
 const imagesLinkMainPage = [
   "./images/github.svg",
   "./images/linkedin2.svg",
   "./images/twitter.svg",
-  "./images/facebook.svg",
 ];
 
 export function createNav(title) {

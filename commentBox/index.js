@@ -4,6 +4,21 @@ createNav("comment box");
 const main = document.querySelector("main");
 let commentArray = [];
 
+// const firstMessage = document.createElement("p");
+// firstMessage.innerHTML = "first message";
+// main.appendChild(firstMessage);
+// commentArray.push(firstMessage.innerHTML);
+
+// main.addEventListener("click", (e) => {
+//   if (e.target.innerHTML === "first message") {
+//     const secondMessage = document.createElement("p");
+//     secondMessage.innerHTML = "second message";
+//     main.appendChild(secondMessage);
+//     commentArray.push(secondMessage.innerHTML);
+//     console.log(commentArray);
+//   }
+// });
+
 function displayComment(name, message) {
   const commentContainer = document.createElement("div");
   commentContainer.classList.add("comment-box");
@@ -32,7 +47,7 @@ function replyComment(name, message) {
                                       <div>
                                         <button type="button">reply</button>
                                         <button type="button">edit</button>
-                                        <button type="button">submit</button>
+                                        <button type="button">delete</button>
                                       </div>`;
   main.appendChild(replyCommentContainer);
 
@@ -44,3 +59,9 @@ const replyBtn = document.querySelector(".reply");
 replyBtn.addEventListener("click", () => {
   replyComment("reet", "hello");
 });
+
+/*
+first comment box
+if clicked on first comment box then child comment box is created
+if clicked again of first comment box then another child comment box is created
+*/
